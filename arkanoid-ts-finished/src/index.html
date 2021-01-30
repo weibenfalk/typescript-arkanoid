@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Typescript App</title>
+  </head>
+  <body>
+    <div id="main" class="main">
+      <canvas id="playField" width="1000" height="600"></canvas>
+      <img id="background" src="./images/background.png"></img>
+      <div id="display">
+        <div id="score"></div>
+        <button id="start">Start</button>
+        <div id="info">Press play!</div>
+      </div>
+    </div>
+    <script src="./index.ts"></script>
+  </body>
+  <style>
+    :root {
+      --width: 1000px;
+      --height: 650px;
+    }
+
+    #main {
+      position: relative;
+      width: 1000px;
+      margin: 0 auto;
+      width: var(--width);
+      height: var(--height);
+      font-size: 32px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    canvas {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
+      border-top: 1px solid grey;
+      border-left: 1px solid grey;
+      border-right: 1px solid grey;
+      margin-bottom: 40px;
+    }
+
+    #display {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      width: var(--width);
+    }
+
+    #score,
+    #info {
+      width: 200px;
+    }
+  </style>
+</html>
